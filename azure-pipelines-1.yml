@@ -31,9 +31,9 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '**/*Test.csproj'
-    arguments: '--no-restore'
-  displayName: 'Run the test cases'
+    projects: '**/*.csproj'
+    arguments: '--output $(System.DefaultWorkingDirectory)/publish_output --configuration Release'
+  displayName: ' test '
 
   
 
