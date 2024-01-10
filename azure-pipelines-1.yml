@@ -29,11 +29,11 @@ steps:
 
 
 - task: DotNetCoreCLI@2
+  displayName: Test
   inputs:
     command: 'test'
     projects: '**/*.csproj'
-    arguments: '--output $(System.DefaultWorkingDirectory)/publish_output --configuration Release'
-  displayName: ' test '
+    publishTestResults: false
 
   
 
